@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "mimiweb"
   gem.homepage = "http://github.com/crm114/mimiweb"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Ruby client for MiMI Web}
+  gem.description = %Q{Access to MiMI and Metabolomics databases via a web service provided by NCIBI.}
   gem.email = "jose@mrkp.co"
   gem.authors = ["Jose Irizarry"]
   # dependencies defined in Gemfile

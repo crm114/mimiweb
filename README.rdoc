@@ -1,6 +1,31 @@
 = mimiweb
 
-Description goes here.
+Mimiweb is a ruby client for the MiMI and Metabolomics databases provided by NCIBI
+
+http://portal.ncibi.org/gateway/
+
+http://mimi.ncibi.org/MimiWeb/main-page.jsp
+
+== Usage
+
+There are for methods on the Mimiweb Web Service. With this client you can access them as follows:
+
+= Free text search
+
+ruby-1.9.2-p290 :001 > results = Mimiweb.search("pwp1")
+ruby-1.9.2-p290 :002 > results.class => Array
+
+= GeneID search
+
+ruby-1.9.2-p290 :001 > results = Mimiweb.entrez(1436)
+
+= KEGG CompundID search
+
+ruby-1.9.2-p290 :001 > results = Mimiweb.kegg_compund("C00061")
+
+= KEGG ReactionID search
+
+ruby-1.9.2-p290 :001 > results = Mimiweb.kegg_reaction("R00548")
 
 == Contributing to mimiweb
  
@@ -16,4 +41,3 @@ Description goes here.
 
 Copyright (c) 2011 Jose Irizarry. See LICENSE.txt for
 further details.
-
