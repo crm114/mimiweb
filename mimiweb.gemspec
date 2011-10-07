@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/mimiweb.rb",
+    "mimiweb.gemspec",
     "test/helper.rb",
     "test/test_mimiweb.rb"
   ]
