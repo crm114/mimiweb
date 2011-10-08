@@ -21,11 +21,11 @@ ruby-1.9.2-p290 :001 > results = Mimiweb.entrez(1436)
 or
 
 Pass a type as a second parameter
-
-:compounds
-:reactions
-:nlp
-:interactions # default
+[types]
+	:compounds
+	:reactions
+	:nlp
+	:interactions # default
 
 ruby-1.9.2-p290 :001 > results = Mimiweb.entrez(1436, type)
 
