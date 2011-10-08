@@ -11,7 +11,7 @@ http://mimi.ncibi.org/MimiWeb/main-page.jsp
   require 'mimiweb'
 
   # Free text search
-	results = Mimiweb.search("pwp1")
+  results = Mimiweb.search("pwp1")
 
   # GeneID search (Entrez)
  	results = Mimiweb.entrez(1436)
