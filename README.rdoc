@@ -6,37 +6,33 @@ http://portal.ncibi.org/gateway/
 
 http://mimi.ncibi.org/MimiWeb/main-page.jsp
 
-= Usage
+== Usage
 
-There are four methods on the Mimiweb Web Service. With this client you can access them as follows
+  require 'mimiweb'
 
-== Free text search
+  # Free text search
+	results = Mimiweb.search("pwp1")
 
-ruby-1.9.2-p290 :001 > results = Mimiweb.search("pwp1")
+  # GeneID search (Entrez)
+ 	results = Mimiweb.entrez(1436)
+  
+  # Or pass a type. Types are: compounds, interactions, reactions, nlp.
+  # Default = :interactions
 
-== GeneID search
-
-ruby-1.9.2-p290 :001 > results = Mimiweb.entrez(1436)
-
-or
-
-Pass a type as a second parameter
-[types]
-	:compounds
-	:reactions
-	:nlp
-	:interactions # default
-
-ruby-1.9.2-p290 :001 > results = Mimiweb.entrez(1436, type)
+	results = Mimiweb.entrez(7389, :compounds)
 
 
-== KEGG CompundID search
+  # KEGG CompundID search
+	results = Mimiweb.kegg_compund("C00061")
 
-ruby-1.9.2-p290 :001 > results = Mimiweb.kegg_compund("C00061")
+  # KEGG ReactionID search
 
-== KEGG ReactionID search
+	results = Mimiweb.kegg_reaction("R00548")
 
-ruby-1.9.2-p290 :001 > results = Mimiweb.kegg_reaction("R00548")
+
+== To Do
+
+* Tests!
 
 == Contributing to mimiweb
  
@@ -52,3 +48,4 @@ ruby-1.9.2-p290 :001 > results = Mimiweb.kegg_reaction("R00548")
 
 Copyright (c) 2011 Jose Irizarry. See LICENSE.txt for
 further details.
+
