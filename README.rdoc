@@ -32,7 +32,8 @@ http://mimi.ncibi.org/MimiWeb/main-page.jsp
 
 == To Do
 
-* Tests!
+* Tests
+* Error handling
 
 == Contributing to mimiweb
  
