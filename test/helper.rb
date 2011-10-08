@@ -1,5 +1,7 @@
 require 'rubygems'
 require 'bundler'
+require 'httparty'
+require 'hashie'
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e

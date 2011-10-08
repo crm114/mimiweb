@@ -2,19 +2,29 @@ GEM
   remote: http://rubygems.org/
   specs:
     git (1.2.5)
+    hashie (1.1.0)
+    httparty (0.8.1)
+      multi_json
+      multi_xml
     jeweler (1.6.4)
       bundler (~> 1.0)
       git (>= 1.2.5)
       rake
+    multi_json (1.0.3)
+    multi_xml (0.4.1)
     rake (0.9.2)
     rcov (0.9.10)
+    rcov (0.9.10-java)
     shoulda (2.11.3)
 
 PLATFORMS
+  java
   ruby
 
 DEPENDENCIES
   bundler (~> 1.0.0)
+  hashie
+  httparty
   jeweler (~> 1.6.4)
   rcov
   shoulda

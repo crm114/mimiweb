@@ -1,17 +1,15 @@
 require 'httparty'
 require 'hashie'
 
-BASE_URL = "http://mimi.ncibi.org/MimiWeb/fetch.jsp?"
-
 module Mimiweb
   class << self
     include HTTParty 
+    BASE_URL =  'http://mimi.ncibi.org/MimiWeb/fetch.jsp?'
     def search(term)
       get_results(:search, term)
     end
-    def entrez(id, *type)
-      result_type = type || "interactions"
-      get_results(:geneid, id, result_type)
+    def entrez(id, type="interactions")
+      get_results(:geneid, id, type)
     end
     def kegg_compound(id)
       results = get_results(:cid, id)
@@ -21,9 +19,8 @@ module Mimiweb
     end
 
     private
-    def get_results(search_type, term, *type)
-      type = type || "interactions"
-      if search_type == :gene
+    def get_results(search_type, term, type)
+      if search_type == :geneid
         response = HTTParty.get(BASE_URL, {:query => {search_type => term, :type => type}}).parsed_response rescue "server error"
       else
         response = HTTParty.get(BASE_URL, {:query => {search_type => term}}).parsed_response rescue "server error"

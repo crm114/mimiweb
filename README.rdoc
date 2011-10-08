@@ -18,6 +18,18 @@ ruby-1.9.2-p290 :001 > results = Mimiweb.search("pwp1")
 
 ruby-1.9.2-p290 :001 > results = Mimiweb.entrez(1436)
 
+or
+
+Pass a type as a second parameter
+
+:compounds
+:reactions
+:nlp
+:interactions # default
+
+ruby-1.9.2-p290 :001 > results = Mimiweb.entrez(1436, type)
+
+
 == KEGG CompundID search
 
 ruby-1.9.2-p290 :001 > results = Mimiweb.kegg_compund("C00061")
