@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jose Irizarry"]
-  s.date = "2011-10-07"
+  s.date = "2011-10-08"
   s.description = "Access to MiMI and Metabolomics databases via a web service provided by NCIBI."
   s.email = "jose@mrkp.co"
   s.extra_rdoc_files = [
@@ -43,17 +43,23 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
+      s.add_development_dependency(%q<httparty>, [">= 0"])
+      s.add_development_dependency(%q<hashie>, [">= 0"])
     else
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_dependency(%q<rcov>, [">= 0"])
+      s.add_dependency(%q<httparty>, [">= 0"])
+      s.add_dependency(%q<hashie>, [">= 0"])
     end
   else
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
     s.add_dependency(%q<rcov>, [">= 0"])
+    s.add_dependency(%q<httparty>, [">= 0"])
+    s.add_dependency(%q<hashie>, [">= 0"])
   end
 end
 
