@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "mimiweb"
+  s.name = %q{mimiweb}
   s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jose Irizarry"]
-  s.date = "2011-10-08"
-  s.description = "Access to MiMI and Metabolomics databases via a web service provided by NCIBI."
-  s.email = "jose@mrkp.co"
+  s.date = %q{2011-10-10}
+  s.description = %q{Access to MiMI and Metabolomics databases via a web service provided by NCIBI.}
+  s.email = %q{jose@mrkp.co}
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -29,11 +29,11 @@ Gem::Specification.new do |s|
     "test/helper.rb",
     "test/test_mimiweb.rb"
   ]
-  s.homepage = "http://github.com/crm114/mimiweb"
+  s.homepage = %q{http://github.com/crm114/mimiweb}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.10"
-  s.summary = "Ruby client for MiMI Web"
+  s.rubygems_version = %q{1.5.1}
+  s.summary = %q{Ruby client for MiMI Web}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
