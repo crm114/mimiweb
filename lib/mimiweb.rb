@@ -6,16 +6,16 @@ module Mimiweb
     include HTTParty 
     BASE_URL =  'http://mimi.ncibi.org/MimiWeb/fetch.jsp?'
     def search(term)
-      get_results(:search, term)
+      get_results(:search, term, type="")
     end
     def entrez(id, type="interactions")
       get_results(:geneid, id, type)
     end
     def kegg_compound(id)
-      results = get_results(:cid, id)
+      get_results(:cid, id, type="")
     end
     def kegg_reaction(id)
-      get_results(:rid, id)
+      get_results(:rid, id, type="")
     end
 
     private
